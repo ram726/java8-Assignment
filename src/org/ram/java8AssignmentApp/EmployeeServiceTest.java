@@ -127,9 +127,8 @@ public class EmployeeServiceTest {
 			@Override
 			public void employeeFrom2ndIndexTo5thIndex() {
 				System.out.println("employees from 2nd index to 5th index");
-				List<Employee>e= empList.subList(2, 6);
-				System.out.println(e);
-				System.out.println("---------------------------------------------------------");
+		                IntStream.range(2,6).mapToObj(o->empList.get(o)).forEach(System.out::println);
+		                System.out.println("---------------------------------------------------------");
 			}
 			
 			/*Create a method to print the employee with the highest salary
